@@ -1,0 +1,126 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.27.0.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 123 123, 123, LIC=QF82M-XFDZ8-45AT5-GGT1E-FU8X5-I84TZ
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.27.0.0
+Toolchain Path:  D:\Program Files (x86)\keil5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.27.0.0
+Dialog DLL:      DCM.DLL V1.17.2.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.5.0
+Dialog DLL:      TCM.DLL V1.36.1.0
+ 
+<h2>Project:</h2>
+I:\my_project——2022_0807\6-HAL_STM32F429\9-OLED-KEY-LED-2023-0903\MDK-ARM\9-OLED-KEY-LED-2023-0903.uvprojx
+Project File Date:  10/28/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Program Files (x86)\keil5\ARM\ARMCC\Bin'
+Build target '9-OLED-KEY-LED-2023-0903'
+compiling menu.c...
+HARDWARE\menu\menu.c(74): warning:  #223-D: function "Gui_StrCenter" declared implicitly
+  		Gui_StrCenter(0,220,(u8 *)ColorText[i],24,1);delay_ms(1000);
+HARDWARE\menu\menu.c(85): warning:  #223-D: function "Gui_StrCenter" declared implicitly
+  		Gui_StrCenter(0,lcddev.height-32,"菜单测试程序",24,1);//居中显示
+HARDWARE\menu\menu.c(90): warning:  #223-D: function "Gui_StrCenter" declared implicitly
+  		Gui_StrCenter(0,lcddev.height-32,"ColorText",24,1);//居中显示
+HARDWARE\menu\menu.c(98): warning:  #223-D: function "Gui_StrCenter" declared implicitly
+  		Gui_StrCenter(0,lcddev.height-32,"LED已打开",24,1);//居中显示
+HARDWARE\menu\menu.c(104): warning:  #223-D: function "Gui_StrCenter" declared implicitly
+  		Gui_StrCenter(0,lcddev.height-32,"LED已关闭",24,1);//居中显示
+HARDWARE\menu\menu.c(134): warning:  #223-D: function "Gui_StrCenter" declared implicitly
+  	Gui_StrCenter(0,9,str,24,1);  //菜单顶部标题 居中显示
+HARDWARE\menu\menu.c(137): error:  #140: too many arguments in function call
+  	LCD_ShowString(10,lcddev.height-32,100,30,24, "右键确定",0);
+HARDWARE\menu\menu.c(138): error:  #140: too many arguments in function call
+  	LCD_ShowString(374,lcddev.height-32,100,30,24, "左键取消",0);
+HARDWARE\menu\menu.c(168): error:  #140: too many arguments in function call
+  		LCD_ShowString(144,150+(i+1)*40,200,30,24, (u8 *)cur_item[i].label,i==item_index ? 0:1);
+HARDWARE\menu\menu.c(178): error:  #20: identifier "KEY_UP_PRESS" is undefined
+  	if(value==KEY_UP_PRESS || value==KEY_DOWN_PRESS || value==KEY_ENTER_PRESS || value==KEY_RETURN_PRESS)
+HARDWARE\menu\menu.c(178): error:  #20: identifier "KEY_DOWN_PRESS" is undefined
+  	if(value==KEY_UP_PRESS || value==KEY_DOWN_PRESS || value==KEY_ENTER_PRESS || value==KEY_RETURN_PRESS)
+HARDWARE\menu\menu.c(205): warning:  #223-D: function "Gui_StrCenter" declared implicitly
+  							Gui_StrCenter(0,lcddev.height-32,"待设置~~~",24,1);//居中显示
+HARDWARE\menu\menu.c(218): warning:  #223-D: function "Gui_StrCenter" declared implicitly
+  							Gui_StrCenter(0,lcddev.height-32,"待设置~~~",24,1);//居中显示
+HARDWARE\menu\menu.c(237): warning:  #223-D: function "Gui_StrCenter" declared implicitly
+  					Gui_StrCenter(0,lcddev.height-32,"已是主菜单",24,1);//居中显示
+HARDWARE\menu\menu.c: 9 warnings, 5 errors
+compiling led.c...
+HARDWARE\LED\led.c(6): warning:  #223-D: function "RCC_AHB1PeriphClockCmd" declared implicitly
+  	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOF,ENABLE);  //使能GPIOF时钟
+HARDWARE\LED\led.c(6): error:  #20: identifier "RCC_AHB1Periph_GPIOF" is undefined
+  	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOF,ENABLE);  //使能GPIOF时钟
+HARDWARE\LED\led.c(8): error:  #136: struct "<unnamed>"  has no field "GPIO_Pin"
+  	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9 | GPIO_Pin_10;  //LED0和LED1对应引脚
+HARDWARE\LED\led.c(8): error:  #20: identifier "GPIO_Pin_9" is undefined
+  	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9 | GPIO_Pin_10;  //LED0和LED1对应引脚
+HARDWARE\LED\led.c(8): error:  #20: identifier "GPIO_Pin_10" is undefined
+  	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9 | GPIO_Pin_10;  //LED0和LED1对应引脚
+HARDWARE\LED\led.c(9): error:  #136: struct "<unnamed>"  has no field "GPIO_Mode"
+  	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;     //普通输出模式
+HARDWARE\LED\led.c(9): error:  #20: identifier "GPIO_Mode_OUT" is undefined
+  	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;     //普通输出模式
+HARDWARE\LED\led.c(10): error:  #136: struct "<unnamed>"  has no field "GPIO_OType"
+  	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;    //
+HARDWARE\LED\led.c(10): error:  #20: identifier "GPIO_OType_PP" is undefined
+  	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;    //
+HARDWARE\LED\led.c(11): error:  #136: struct "<unnamed>"  has no field "GPIO_Speed"
+  	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;//100MHz
+HARDWARE\LED\led.c(11): error:  #20: identifier "GPIO_Speed_100MHz" is undefined
+  	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;//100MHz
+HARDWARE\LED\led.c(12): error:  #136: struct "<unnamed>"  has no field "GPIO_PuPd"
+  	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;      //上拉
+HARDWARE\LED\led.c(12): error:  #20: identifier "GPIO_PuPd_UP" is undefined
+  	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;      //上拉
+HARDWARE\LED\led.c(13): warning:  #223-D: function "GPIO_Init" declared implicitly
+      GPIO_Init(GPIOF,&GPIO_InitStructure);
+HARDWARE\LED\led.c(15): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+  	GPIO_SetBits(GPIOF,GPIO_Pin_9 | GPIO_Pin_10);  //LED0、LED1设置高，灯灭
+HARDWARE\LED\led.c: 3 warnings, 12 errors
+compiling lcd.c...
+HARDWARE\LCD\lcd.c(2152): warning:  #223-D: function "strlen" declared implicitly
+  	u16 len=strlen((const char *)str);
+HARDWARE\LCD\lcd.c(2156): error:  #140: too many arguments in function call
+  	LCD_ShowString(x+x1,y,200,size,size,str,mode);	
+HARDWARE\LCD\lcd.c: 1 warning, 1 error
+compiling main.c...
+"9-OLED-KEY-LED-2023-0903\9-OLED-KEY-LED-2023-0903.axf" - 18 Error(s), 13 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.4.0.pack
+                ARM.CMSIS.5.4.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.1.2
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.9.0.pack
+                Keil.STM32F4xx_DFP.2.9.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_9-OLED-KEY-LED-2023-0903
+  D:\Program Files (x86)\keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include
+  D:\Program Files (x86)\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.1.2
+Target not created.
+Build Time Elapsed:  00:00:04
+</pre>
+</body>
+</html>
